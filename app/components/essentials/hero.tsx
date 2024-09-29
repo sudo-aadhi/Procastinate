@@ -6,7 +6,7 @@ import Overlay from "./overlay";
 
 const Hero = () => {
   return (
-    <div className="overflow-hidden flex flex-col items-center w-[1310px] h-[1122px] bg-gradient-to-b from-[#F1F0FF] via-[#F1D8FA] to-purple-100 relative top-[5px] rounded-3xl">
+    <div className="overflow-hidden flex flex-col items-center w-[1450px] h-[1122px] bg-gradient-to-b from-[#F1F0FF] via-[#F1D8FA] to-purple-100 relative top-[10px] rounded-3xl">
       <span className="flex items-center justify-center relative z-10">
         {/* Set the z-index to ensure particles are behind other content */}
         <ParticlesComponent id="particles" />
