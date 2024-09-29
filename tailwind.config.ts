@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        imbueSans: ["var(--font-imbue)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
