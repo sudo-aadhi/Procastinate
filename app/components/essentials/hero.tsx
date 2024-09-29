@@ -1,10 +1,15 @@
+"use client";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import ParticlesComponent from "./particles";
+
 const Hero = () => {
   return (
     <div className="flex flex-col items-center w-[1310px] h-[1122px] bg-gradient-to-b from-[#F1F0FF] via-[#F1D8FA] to-purple-100 relative top-[5px] rounded-3xl">
       <ProcastinateBanner />
       <GalaxyButton
-        buttonText="Get Started"
-        customClass="relative top-[200px] bg-white w-[157px] h-[40px] rounded-md"
+        buttonText="Get started for free"
+        customClass="relative top-[200px] bg-black w-[157px] h-[40px] rounded-md flex items-center justify-center overflow-hidden bg-[#42208D]"
       />
     </div>
   );
@@ -43,14 +48,12 @@ const GalaxyButton: React.FC<GalaxyButtonProp> = ({
   customClass,
 }) => {
   return (
-    <div
-      className={
-        customClass
-          ? `${customClass}`
-          : "relative top-[200px] bg-black w-[100px] h-[30px]"
-      }
-    >
-      button
+    <div className={`${customClass}`}>
+      <div className="w-[145px] h-[30px] border border-[#ffffff24] flex items-center justify-center rounded-md">
+        <button className="absolute z-10 text-white text-[14px] font-normal">
+          {buttonText}
+        </button>
+      </div>
     </div>
   );
 };
