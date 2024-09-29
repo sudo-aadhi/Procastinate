@@ -30,7 +30,7 @@ const ParticlesComponent = (props) => {
     () => ({
       background: {
         color: {
-          value: "#1E2F97",
+          value: "",
         },
       },
       fpsLimit: 120,
@@ -73,14 +73,14 @@ const ParticlesComponent = (props) => {
             default: "bounce",
           },
           random: true,
-          speed: 2,
+          speed: 1,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 800,
+          value: 850,
         },
         opacity: {
           value: 1.0,
@@ -89,7 +89,7 @@ const ParticlesComponent = (props) => {
           type: "circle",
         },
         size: {
-          value: { min: 0.2, max: 1 },
+          value: { min: 0.2, max: 1.2 },
         },
       },
       detectRetina: false,
@@ -97,7 +97,14 @@ const ParticlesComponent = (props) => {
     []
   );
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />;
+  return (
+    <Particles
+      id={props.id}
+      init={particlesLoaded}
+      options={options}
+      className=""
+    />
+  );
 };
 
 export default ParticlesComponent;
