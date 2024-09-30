@@ -17,6 +17,11 @@ const imbue = localFont({
   variable: "--font-imbue",
   weight: "100 900",
 });
+const licorice = localFont({
+  src: "./fonts/Licorice-Regular.ttf",
+  variable: "--font-licorice",
+  weight: "100 900",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${imbue.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${imbue.variable} ${licorice.variable} antialiased`}
       >
         {children}
       </body>

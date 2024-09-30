@@ -5,6 +5,12 @@ import ParticlesComponent from "./particles";
 import Overlay from "./overlay";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import Founder from "../../assets/image.jpeg";
 
 const Hero = () => {
   return (
@@ -183,10 +189,115 @@ export const Seperator: React.FC<SeperatorProp> = ({ width, position }) => {
 
 export const LetterComponent = () => {
   return (
-    <div className="flex flex-col items-center w-[761px] h-[590px] bg-[#FAFAFA] shadow-[-0px_0px_27px_5px_#E0E0E2] relative top-[250px]">
-      <div className="flex w-[600px] h-[60px] flex-col">
-        <h1>Greetings to you,</h1>
-        <h1>Greetings to you,</h1>
+    <div className="flex flex-col items-center w-[761px] h-auto bg-[#FAFAFA] shadow-lg p-8 relative top-[200px]">
+      {/* Main Content Container */}
+      <div className="flex flex-col w-full p-8 bg-gradient-to-b from-white to-[#F8F8F7] shadow-sm">
+        {/* Greeting Section */}
+        <div className="mb-6">
+          <h1 className="text-[35px] text-gray-800 mb-2 font-licorice font-extrabold">
+            Greetings to you,
+          </h1>
+
+          {/* Aadarsh's Name with HoverCard */}
+          <div className="mt-2 text-[22px] font-licorice font-extrabold">
+            <HoverCard>
+              <HoverCardTrigger className="text-blue-500 underline decoration-solid cursor-pointer">
+                Aadarsh
+              </HoverCardTrigger>
+              <HoverCardContent className="flex mt-2 p-4 bg-white border border-[#dadada] rounded shadow-lg h-[100px] w-[300px]">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-[70px] h-[70px] rounded-full shadow-inner shadow-[#DADADC]">
+                    <Image
+                      src={"https://i.ibb.co/B6F5cC5/image.jpg"}
+                      alt="Founder"
+                      width={1080}
+                      height={1080}
+                      className="rounded-full"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <span className="font-semibold flex items-center">
+                      Aadarsh Anilkumar
+                      <Image
+                        src="https://purecatamphetamine.github.io/country-flag-icons/3x2/IN.svg"
+                        alt="Indian Flag"
+                        className="ml-2 shadow-md"
+                        width={20}
+                        height={15}
+                      />
+                    </span>
+                    <p className="text-sm text-gray-600">
+                      Founder & CEO, Procrastinate
+                    </p>
+                  </div>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
+          </div>
+        </div>
+        {/* Body Text */}
+        <div className="mb-6">
+          <p className="text-black text-[25px] leading-relaxed mb-4 font-licorice font-extrabold">
+            In a world filled with distractions, staying productive is a
+            challenge. Finding the right tools can be daunting. Many options are
+            either dull, overly complicated, or lack the necessary features.
+            That’s why we’ve created beautiful Notion templates, designed to
+            elevate your focus and transform your productivity journey.
+          </p>
+          <p className="text-black text-[25px] leading-relaxed mb-4 font-licorice font-extrabold">
+            We help others overcome distractions and boost their productivity.
+          </p>
+          <p className="text-black text-[25px] leading-relaxed mb-4 font-licorice font-extrabold">
+            If you're looking to enhance your focus with our visually appealing
+            templates and have a website ready to share your experience, we
+            encourage you to explore Procastinate. Reach out to us to see how
+            our templates can help you succeed!
+            <a
+              href="https://livechat.com"
+              className="text-blue-500 underline ml-1 text-[25px] font-licorice font-extrabold"
+            >
+              Linkedin
+            </a>
+            ,
+            <a
+              href="https://x.com/kaizenaadhi"
+              target="_blank"
+              className="text-blue-500 underline ml-1 text-[25px] font-licorice font-extrabold"
+            >
+              Twitter
+            </a>
+            , or
+            <a
+              href="mailto:developedbyaadhi@gmail.com"
+              target="_blank"
+              className="text-blue-500 underline ml-1"
+            >
+              email
+            </a>
+            .
+          </p>
+        </div>
+        {/* Offer Section
+        <p className="text-gray-600 text-[16px] leading-relaxed mb-6">
+          We would be happy to offer you <strong>6 months of free usage</strong>{" "}
+          in exchange for your feedback.
+        </p> */}
+        {/* Signature Section */}
+        <div className="flex flex-col gap-[10px]">
+          <p className="font-licorice font-extrabold text-[20px]">
+            Gratefully,
+          </p>
+          <Image
+            src="https://svgshare.com/i/1Aws.svg"
+            alt="signature"
+            width={250}
+            height={100}
+            draggable="false"
+          />
+          <p className="text-gray-500 text-[22px] font-licorice font-extrabold">
+            Your Productivity Matters Us Alot.
+          </p>
+        </div>
       </div>
     </div>
   );
