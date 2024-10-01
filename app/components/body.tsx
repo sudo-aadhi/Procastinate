@@ -3,6 +3,7 @@ import Hero, {
   LetterComponent,
   Seperator,
 } from "./essentials/hero";
+import ReviewComponent from "./essentials/review";
 
 const Body = () => {
   return (
@@ -10,6 +11,7 @@ const Body = () => {
       <Hero />
       <CompatiableWith />
       <LetterComponent />
+      <ReviewComponent />
     </div>
   );
 };

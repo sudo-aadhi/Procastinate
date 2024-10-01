@@ -30,6 +30,7 @@ const Hero = () => {
 
         <GalaxyButton
           buttonText="Get a demo"
+          textclass=""
           customClass="relative top-[200px] bg-white w-[157px] h-[40px] rounded-md flex items-center justify-center overflow-hidden bg-[#42208D]"
         />
       </span>
