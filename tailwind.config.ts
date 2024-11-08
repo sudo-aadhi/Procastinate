@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        instrument: ["var(--font-instrumentSerif)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
