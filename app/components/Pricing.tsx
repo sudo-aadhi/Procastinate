@@ -62,7 +62,7 @@ const Pricing: React.FC = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="flex flex-col items-center text-center w-full h-[967.48px] absolute top-[3600px]"
+      className="flex flex-col items-center text-center w-full h-[967.48px] absolute top-[3546px]"
     >
       {/* Separator line with gradient effect */}
       <motion.div
