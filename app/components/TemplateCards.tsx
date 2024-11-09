@@ -28,7 +28,7 @@ marketing...`,
           {name}
         </h1>
 
-        <h3 className="opacity-50 text-[10px] md:text-[14px] lg:text-[14px] leading-tight animate-fadeIn">
+        <h3 className="opacity-50 text-[10px] md:text-[14px] lg:text-[14px] leading-tight animate-fadeIn w-[230px]">
           {description}
         </h3>
 
