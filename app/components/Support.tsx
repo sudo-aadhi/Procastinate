@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 
 const Support: React.FC = () => {
-  // Array of team member avatars
   const teamMembers = [
     "https://framerusercontent.com/images/uJMF8v7ihguXDO1NORhGFnzVo4.png?scale-down-to=512",
     "https://framerusercontent.com/images/Yc9LZdloQELPcJB86CkLRRcIkaY.png?scale-down-to=512",
@@ -14,9 +13,9 @@ const Support: React.FC = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center py-20 px-4 absolute top-[6000px]">
+    <section className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center py-20 absolute top-[6000px]">
       {/* Content Container */}
-      <div className="flex flex-col items-center max-w-4xl mx-auto text-center gap-8 mb-16 z-10">
+      <div className="flex flex-col items-center max-w-4xl mx-auto text-center gap-8 mb-16 z-10 px-4">
         <h1 className="font-instrument text-[40px] md:text-[50px] lg:text-[70px] leading-tight animate-fadeIn">
           Full Service Design Team And Founders For Notion
         </h1>
@@ -37,25 +36,24 @@ const Support: React.FC = () => {
       </div>
 
       {/* Team Grid */}
-      <div className="relative grid grid-cols-2 md:grid-cols-3 gap-6 max-w-[800px] w-full mx-auto p-4 z-10 shadow-md">
-        {teamMembers.map((avatar, index) => (
-          <div
-            key={index}
-            className="relative aspect-square w-[180px] h-[180px]"
-          >
-            <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/10" />
-            <div className="relative w-full h-full overflow-hidden rounded-full">
-              <Image
-                src={avatar}
-                alt={`Team member ${index + 1}`}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-full"
-                draggable="false"
-              />
+      <div className="relative z-10 w-full max-w-[800px] mx-auto">
+        <div className="flex flex-wrap justify-center gap-10">
+          {teamMembers.map((avatar, index) => (
+            <div key={index} className="relative w-[180px] h-[180px]">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/10" />
+              <div className="relative w-full h-full overflow-hidden rounded-full">
+                <Image
+                  src={avatar}
+                  alt={`Team member ${index + 1}`}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full"
+                  draggable="false"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
