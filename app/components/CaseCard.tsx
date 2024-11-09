@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import TemplateCards from "./TemplateCards";
+import { notionTemplate } from "../../config";
 import { motion, useAnimation } from "framer-motion";
 
 const CaseCard: React.FC = () => {
@@ -51,21 +52,16 @@ const CaseCard: React.FC = () => {
           </p>
         </div>
         <div className="space-y-20 relative top-[150px]">
-          {[...Array(3)].map((_, index) => (
-            <motion.div
-              key={index}
-              ref={(el) => (cardRefs.current[index] = el)}
-              initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
-              variants={{
-                visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 0, y: 50 },
-              }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <TemplateCards />
-            </motion.div>
-          ))}
+          {notionTemplate.map((val, key) => {
+            return (
+              <TemplateCards
+                key={key}
+                name={val.Name}
+                description={val.Description}
+                price={val.Price}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

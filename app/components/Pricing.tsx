@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Check } from "lucide-react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { pricingPlans } from "@/config";
 
 // Define the props for the PricingCard component
 interface PricingCardProps {
@@ -93,9 +94,19 @@ const Pricing: React.FC = () => {
         variants={itemVariants}
         className="flex items-center justify-center w-[1000px] h-[484.33px] relative top-[250px] gap-[10px]"
       >
-        <PricingCard />
-        <PricingCard variant="featured" />
-        <PricingCard />
+        {pricingPlans.map((val, index) => {
+          return (
+            <PricingCard
+              key={index}
+              duration={val.duration}
+              planName={val.planName}
+              description={val.description}
+              pricing={val.pricing}
+              features={val.features}
+              variant={val.variant ? val.variant : undefined}
+            />
+          );
+        })}
       </motion.div>
 
       {/* Booking section */}

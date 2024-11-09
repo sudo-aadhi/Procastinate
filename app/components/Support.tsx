@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Support: React.FC = () => {
   const teamMembers = [
-    "https://framerusercontent.com/images/uJMF8v7ihguXDO1NORhGFnzVo4.png?scale-down-to=512",
+    "https://framerusercontent.com/images/NZ1Ex3cRM5nZwu8Qge08O68anRo.png?scale-down-to=512",
     "https://framerusercontent.com/images/Yc9LZdloQELPcJB86CkLRRcIkaY.png?scale-down-to=512",
     "https://framerusercontent.com/images/uJMF8v7ihguXDO1NORhGFnzVo4.png?scale-down-to=512",
     "https://framerusercontent.com/images/7X0QO4NBDnarUm9WvtbmT6E6oJs.png",
